@@ -1,0 +1,17 @@
+{
+  "name": "tinyspark",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "tinyspark-db",
+      "database_id": "YOUR_D1_DATABASE_ID",
+      "migrations_dir": "db/migrations"
+    }
+  ],
+  "assets": {
+    "directory": ".open-next/assets"
+  }
+}

@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFF8F0;
+  --foreground: #2D3436;
+  --color-primary: #FF6B6B;
+  --color-primary-hover: #ee5a5a;
+  --color-secondary: #4ECDC4;
+  --color-yellow: #FFE66D;
+  --color-light-green: #95E1D3;
+  --color-light-pink: #F38181;
+  --color-text-secondary: #636E72;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-secondary: var(--color-secondary);
+  --color-yellow: var(--color-yellow);
+  --color-light-green: var(--color-light-green);
+  --color-light-pink: var(--color-light-pink);
+  --color-text-secondary: var(--color-text-secondary);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce-star {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
+}
+
+.animate-bounce-star {
+  animation: bounce-star 0.3s ease-in-out;
 }
